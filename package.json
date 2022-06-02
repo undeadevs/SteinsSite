@@ -2,7 +2,7 @@
   "name": "steinssite",
   "version": "1.0.0",
   "description": "",
-  "main": "main.js",
+  "main": "toRun.js",
   "dependencies": {
     "express": "^4.17.1"
   },
