@@ -1,0 +1,29 @@
+@media screen and (max-width:475px) {
+    #clock {
+        font-size: 5.7rem;
+    }
+    #timezone {
+        font-size: 1.5rem;
+    }
+    @keyframes zoom-out {
+        from {
+            filter: blur(10px);
+            /* transform: scale(6.5); */
+            background-size: 815%;
+        }
+        to {
+            filter: blur(0);
+            /* transform: scale(1); */
+            background-size: 265%;
+        }
+    }
+}
+
+@media screen and (max-width:379px) {
+    #clock {
+        font-size: 3.7rem;
+    }
+    #timezone {
+        font-size: 1rem;
+    }
+}

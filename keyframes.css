@@ -1,0 +1,76 @@
+@keyframes zoom-out {
+    from {
+        filter: blur(10px);
+        /* transform: scale(6.5); */
+        background-size: 650%;
+    }
+    to {
+        filter: blur(0);
+        /* transform: scale(1); */
+        background-size: 100%;
+    }
+}
+
+@keyframes blink {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes glow {
+    to {
+        color: rgb(255, 241, 118);
+        text-shadow: 0 0 20px rgb(255, 41, 41);
+    }
+}
+
+@keyframes unglow {
+    to {
+        color: rgb(255, 230, 0);
+        text-shadow: 0 0 20px rgb(255, 0, 0);
+    }
+}
+
+@keyframes pump {
+    to {
+        font-size: 15rem;
+    }
+}
+
+@keyframes inv-pump {
+    to {
+        filter: invert(500%);
+    }
+}
+
+@keyframes zoom-in {
+    from {
+        /* background-size: 120%; */
+    }
+    to {
+        transform: rotateZ(15deg) scale(2, 2);
+        /* background-size: 240%; */
+        filter: brightness(50%);
+    }
+}
+
+@keyframes gone {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes bacc {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="responsive.css">
+        <link rel="stylesheet" href="keyframes.css">
+        <title>World;Clock</title>
+    </head>
+
+    <body>
+        <main>
+            <nav>
+                <div class="icons-container" w3-include-html="icons.html">
+                </div>
+            </nav>
+            <section class="clock-section">
+                <div id="clock-bg"></div>
+                <div id="shattered"></div>
+                <h1 id="clock" onclick="changeTimezone()">00.00.00</h1>
+                <h2 id="timezone">Undefined</h2>
+            </section>
+            <section class="tz-section">
+                <div class="tz-wrapper">
+                    <h1>World;<span>C</span>lock</h1>
+                    <div class="thead-wrapper">
+                        <h3 id="curr-time">Current Time: <span>Undefined</span></h3>
+                        <div class="btn-wrapper">
+                            <button id="prev" onclick="prevTab()">Prev</button>
+                            <button id="next" onclick="nextTab()">Next</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer></footer>
+        <script src="includeHTMl.js"></script>
+        <script src="timezones.js"></script>
+        <script src="main.js"></script>
+    </body>
+
+</html>

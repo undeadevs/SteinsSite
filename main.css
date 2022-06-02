@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    overflow: auto;
+}
+
+@font-face {
+    font-family: BONX-M;
+    src: url("BONX-Medium.otf") format("woff"), url("BONX-Medium.otf") format("opentype"), url("BONX-Medium.otf") format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: BONX-F;
+    src: url("BONX-Frame.otf") format("woff"), url("BONX-Frame.otf") format("opentype"), url("BONX-Frame.otf") format("truetype");
+    font-display: swap;
+}
+
+nav {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 0;
+}
+
+.icons-container {
+    position: fixed;
+    right: 0;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 100ms;
+    opacity: 0;
+}
+
+.icons-container:hover {
+    opacity: 1;
+}
+
+.icons-container svg {
+    height: 3rem;
+    margin: 2rem 1rem;
+    cursor: pointer;
+    fill: rgb(200, 200, 200);
+    transition: 100ms;
+}
+
+.icons-container svg:hover {
+    fill: white;
+}
+
+.in-tz{
+    fill: rgb(111, 190, 171)!important;
+}
+
+.in-tz:hover{
+    fill: rgb(87, 236, 201)!important;
+}
+
+.clock-section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#clock-bg {
+    height: 100%;
+    width: 100%;
+    background: url("lab.jpg") center fixed no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
+
+#shattered {
+    height: 100%;
+    width: 100%;
+    background: url("shattered.png") center no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    transform-origin: center;
+    mix-blend-mode: color-dodge;
+    display: none;
+}
+
+#clock {
+    font-family: BONX-M;
+    color: rgb(255, 230, 0);
+    font-size: 7rem;
+    text-shadow: 0 0 20px rgb(255, 0, 0);
+    cursor: pointer;
+}
+
+#timezone {
+    font-family: consolas;
+    color: white;
+    font-size: 2rem;
+    text-shadow: 0 0 10px rgb(147, 229, 243);
+}
+
+.tz-section {
+    font-family: "Futura Md Bt";
+    height: 125vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(240, 240, 240);
+}
+
+.tz-wrapper {
+    margin: 10px 0;
+    height: 105vh;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tz-wrapper h1 {
+    font-family: "EB Garamond", sans-serif;
+    padding-bottom: 1rem;
+    font-size: 3rem;
+}
+
+.tz-wrapper h1 span {
+    color: rgb(240, 240, 240);
+    background-color: black;
+}
+
+.thead-wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-self: flex-start;
+}
+
+#curr-time {
+    color: rgb(75, 75, 75);
+}
+
+#curr-time span {
+    color: rgb(128, 128, 128);
+    font-weight: normal;
+}
+
+.btn-wrapper {
+    display: flex;
+}
+
+.btn-wrapper button {
+    cursor: pointer;
+    font-family: "Futura Md Bt";
+    color: white;
+    /* background-color: rgb(96, 160, 197); */
+    background-color: rgb(111, 190, 171);
+    padding: 10px 20px;
+    border: 1px solid rgb(111, 190, 171);
+    outline: 0;
+    font-size: 15pt;
+    transform-origin: bottom;
+}
+
+.btn-wrapper .disabled {
+    pointer-events: none;
+    color: rgb(111, 190, 171);
+    background-color: transparent;
+}
+
+#tz-table {
+    table-layout: fixed;
+    /* border: 1px solid rgb(200, 200, 200); */
+    border: 1px solid black;
+    /* border: 1px solid rgb(111, 190, 171); */
+    /* border-top: 5px solid rgb(96, 160, 197); */
+    border-top: 5px solid rgb(111, 190, 171);
+    border-collapse: collapse;
+    font-size: 0.85rem;
+}
+
+#tz-table th {
+    width: 225px;
+    text-align: left;
+}
+
+#tz-table td {
+    width: 100px;
+    /* border-right: 1px solid rgb(200, 200, 200); */
+    border-right: 1px solid black;
+    /* border-right: 1px solid rgb(111, 190, 171); */
+    text-align: center;
+}
+
+#tz-table th, #tz-table td {
+    padding: 8px;
+    color: rgb(111, 190, 171);
+}
+
+/* #tz-table th {
+    color: rgb(128, 128, 128);
+}
+
+#tz-table td{
+    color: black;
+} */
+
+#tz-table tr:nth-of-type(odd) {
+    background-color: #14202a;
+    /* background-color: white; */
+}
+
+#tz-table tr:nth-of-type(even) {
+    background-color: #162c3d;
+    /* background-color: rgb(245,245, 245); */
+}
+
+footer {
+    height: 25vh;
+    background-color: rgb(111, 190, 171);
+}
